@@ -1,0 +1,4 @@
+[submodule "colmap"]
+	path = colmap
+	url = git@github.com:B1ueber2y/colmap.git
+	branch = pointvisibility
