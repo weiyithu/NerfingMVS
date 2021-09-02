@@ -1,0 +1,9 @@
+lpips==0.1.3
+imageio
+opencv-python
+scikit-image==0.15.0
+tqdm
+wget
+configargparse
+tensorboard
+h5py

@@ -1,0 +1,12 @@
+expname = scene0000_01
+basedir = ./logs
+datadir = ./data/scene0000_01
+
+factor = 2
+
+N_rand = 1024
+N_samples = 64
+
+use_viewdirs = True
+raw_noise_std = 1e0
+
