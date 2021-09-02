@@ -13,7 +13,7 @@
 ## Installation
 - Pull NerfingMVS repo.
   ```
-  git clone --recursive https://github.com/weiyithu/NerfingMVS
+  git clone --recursive git@github.com:weiyithu/NerfingMVS.git
   ```
 - Install python packages with anaconda.
   ```
@@ -33,7 +33,7 @@
   The whole procedure takes about 3.5 hours on one NVIDIA GeForce RTX 2080 GPU, including COLMAP, depth priors training, NeRF training, filtering and evaluation. COLMAP can be accelerated with multiple GPUs.You will get per-view depth maps in `./logs/$scene_name/filter`. Note that these depth maps have been aligned with COLMAP poses. COLMAP results will be saved in `./data/$scene_name` while others will be preserved in `./logs/$scene_name`
 
 ## Run on Your Own Data!
-- Place your data with following structure:
+- Place your data with the following structure:
   ```
   NerfingMVS
   |───data
@@ -52,7 +52,7 @@
   ```
   sh demo.sh $scene_name
   ```
-  Since our work relies on COLMAP currently, our results are largely dependent on the quality of COLMAP reconstruction.
+  Since our work currently relies on COLMAP, the results are dependent on the quality of the acquired poses and sparse reconstruction from COLMAP.
 
 ## Acknowledgement
 Our code is based on the pytorch implementation of NeRF: [NeRF-pytorch](https://github.com/yenchenlin/nerf-pytorch). We also refer to [mannequin challenge](https://github.com/google/mannequinchallenge). 
@@ -67,3 +67,4 @@ If you find our work useful in your research, please consider citing:
   year = {2021}
 }
 ```
+
