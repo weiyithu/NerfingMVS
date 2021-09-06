@@ -1,5 +1,5 @@
 # NerfingMVS
-### [Project Page](https://weiyithu.github.io/NerfingMVS) | [Paper](http://b1ueber2y.me/projects/NerfingMVS/nerfingmvs.pdf) | [Video](https://youtu.be/i-b5lPnYipA) | [Data](https://drive.google.com/drive/folders/1X_w57Q_MIFlI3lzhRt7Z8C5X9tNS8cg-?usp=sharing)
+### [Project Page](https://weiyithu.github.io/NerfingMVS) | [Paper](https://arxiv.org/abs/2109.01129) | [Video](https://youtu.be/i-b5lPnYipA) | [Data](https://drive.google.com/drive/folders/1X_w57Q_MIFlI3lzhRt7Z8C5X9tNS8cg-?usp=sharing)
 <br/>
 
 > NerfingMVS: Guided Optimization of Neural Radiance Fields for Indoor Multi-view Stereo  
