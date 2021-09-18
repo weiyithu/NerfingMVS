@@ -460,7 +460,8 @@ def train(args):
     else:
         T = poses_tensor.clone()
 
-    depth_confidences = cal_depth_confidences(torch.from_numpy(depth_priors).to(device), T, K, args.topk)
+    depth_confidences = cal_depth_confidences(torch.from_numpy(depth_priors).to(device), 
+                                              T, K, i_train, args.topk)
 
     print('DEFINING BOUNDS')
     if args.no_ndc:
