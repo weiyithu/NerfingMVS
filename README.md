@@ -25,7 +25,7 @@
 - We use COLMAP to calculate poses and sparse depths. However, original COLMAP does not have fusion mask for each view. Thus, we add masks to COLMAP and denote it as a submodule. Please follow https://colmap.github.io/install.html to install COLMAP in `./colmap` folder (Note that do not cover colmap folder with the original version). 
 
 ## Usage
-- Download 8 ScanNet scene data used in the paper [here](https://drive.google.com/file/d/1eY85_adVY-Z8y4XUG8mi31TJzAfdx59M/view?usp=sharing) and put them under `./data` folder. We also upload final results and checkpoints of each scene here. 
+- Download 8 ScanNet scene data used in the paper [here](https://drive.google.com/file/d/1eY85_adVY-Z8y4XUG8mi31TJzAfdx59M/view?usp=sharing) and put them under `./data` folder. We also upload final results and checkpoints of each scene [here](https://drive.google.com/file/d/137zj7McxulcoDINZ3i1woQcvu2HxrM0X/view?usp=sharing). 
 - Run NerfingMVS
   ```
   sh run.sh $scene_name
