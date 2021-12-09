@@ -494,15 +494,23 @@ def train(args):
                 testsavedir = os.path.join(save_path, 'results', 
                                            'renderonly_{}_{:06d}'.format('test', start))
                 render_poses = poses_tensor[i_test]
+                depth_priors = depth_priors[i_test]
+                depth_confidences = depth_confidences[i_test]
+                image_list = image_list[i_test]
             else:
                 testsavedir = os.path.join(save_path, 'results', 
                                            'renderonly_{}_{:06d}'.format('train', start))
                 render_poses = poses_tensor[i_train]
+                depth_priors = depth_priors[i_train]
+                depth_confidences = depth_confidences[i_train]
+                image_list = image_list[i_train]
 
             os.makedirs(testsavedir, exist_ok=True)
             rgbs, disps, depths = render_path(render_poses, hwf, args.chunk, render_kwargs_test, sc=sc,
-                                              savedir=testsavedir, render_factor=args.render_factor, 
-                                              image_list=image_list)
+                                          depth_priors=torch.from_numpy(depth_priors).to(device),
+                                          depth_confidences=torch.from_numpy(depth_confidences).to(device), 
+                                          savedir=testsavedir, render_factor=args.render_factor, 
+                                          image_list=image_list)
             print('Done rendering', testsavedir)
     
             return
