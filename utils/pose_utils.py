@@ -192,7 +192,10 @@ def minify(basedir, factors=[], resolutions=[]):
         print('Minifying', r, basedir)
 
         os.makedirs(imgdir)
-        check_output('cp {}/* {}'.format(imgdir_orig, imgdir), shell=True)
+        if os.name == 'nt':
+            check_output('copy "{}\" "{}"'.format(imgdir_orig, imgdir), shell=True)
+        else:
+            check_output('cp {}/* {}'.format(imgdir_orig, imgdir), shell=True)
 
         ext = imgs[0].split('.')[-1]
         args = ' '.join(['mogrify', '-resize', resizearg, '-format', 'png', '*.{}'.format(ext)])
@@ -202,7 +205,11 @@ def minify(basedir, factors=[], resolutions=[]):
         os.chdir(wd)
 
         if ext != 'png':
-            check_output('rm {}/*.{}'.format(imgdir, ext), shell=True)
+            if os.name == 'nt':
+                check_output('del "{}\*.{}"'.format(imgdir, ext), shell=True)
+            else:
+                check_output('rm {}/*.{}'.format(imgdir, ext), shell=True)
+            
             print('Removed duplicates')
         print('Done')
 
